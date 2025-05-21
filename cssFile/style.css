@@ -1615,10 +1615,15 @@ span#heroNext:hover, span#heroPrev:hover{
     }
     #bagHtml .htmlImg{
       width: 100%;
+      max-width: 100%;
       height: 500px;
       border-radius: 5px;
       object-fit: cover;
-      margin: 2% 0;
+      margin: 2% auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
     }
     #bagHtml .mainPage{
       max-width: 100%;
@@ -1640,3 +1645,104 @@ span#heroNext:hover, span#heroPrev:hover{
       margin: 1% 0;
       
     }
+
+    /* <!-- ======================================================================
+    ==============================Blog HTML start here========================
+    ====================================================================== --> */
+    #blogHtml{
+      max-width: 100%;
+      margin-top: 8%;
+    }
+
+  #blog-container{
+    max-width: 100%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: flex-start;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  #blog-container .blogCard{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    transition: var(--transition-2);
+    border: 1px solid var(--cards-color);
+    padding: 5px;
+    margin-top: 15px;
+    
+  }
+  .blogCard::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 1px solid var(--primary-color);
+    transition: var(--transition-2);
+  }
+  .blogCard:hover::before {
+    border: 15px solid var(--primary-color);
+  }
+  .blogCard img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid var(--primary-color);
+    transition: var(--transition-2);
+   
+    background: var(--primary-color);
+  }
+  .blogCard .guidebtn{
+    position: absolute;
+    top: -10%;
+    opacity: 0;
+    right: -10%;
+    padding: 5px 10px;
+    background: var(--secondary-color);
+    color: var(--txt-pera);
+    font-size: 14px;
+    letter-spacing: -1px;
+    border-radius: 35px;
+    transition: var(--transition-2);
+    z-index: 2;
+  }
+  .blogCard:hover .guidebtn{
+    opacity: 1;
+    top: 5%;
+    right: 5%;
+  }
+  .blogCard .blogContent{
+    z-index: 3;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;  
+    padding: 5px 10px 25px;
+  }
+  .blogContent h4{
+    font-size: var(--font-22);
+    color: var(--txt-blk);
+    opacity: 0.9;
+    font-weight: 500;
+    text-align: left;
+  } 
+  .blogContent p{
+    font-size: var(--font-16);
+    text-align: left;
+    color: var(--txt-semi-wht);
+
+  }
+ 
+  
+  
