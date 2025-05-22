@@ -100,6 +100,22 @@ sliderTwoPrev.addEventListener('click', () => {
 });
 
 
+// =========================================menu section=================== 
+
+const menuOpen = document.querySelector("#open");
+const menuClose = document.querySelector("#close");
+
+menuOpen.addEventListener("click", () => {
+    menuOpen.style.display = "none";
+    menuClose.style.display = "block";
+});
+menuClose.addEventListener("click", () => {
+      menuOpen.style.display = "block";
+    menuClose.style.display = "none";
+});
+
+
+
 
 
 
