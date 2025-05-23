@@ -56,11 +56,10 @@
     <!-- ======================================================================
     ==============================header start here========================
     ====================================================================== -->
-   
     <div id="searchBody">
-        <input type="search" name="search" id="searchOne-input" placeholder="search.." autocomplete onkeyup="searchOn()">
-        <a class="searchIcon"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <p class="src-close">x</p>
+            <input type="search" name="search" id="searchOne-input" placeholder="search.." autocomplete onkeyup="searchOn()">
+            <a class="searchIcon"></a>
+            <p class="src-close">x</p>
 
     </div>
     <header>
@@ -103,11 +102,53 @@
             <div class="search">
                 <i class="ri-search-line search-icon"></i>
             </div>
+
+            <div id="menu">
+                <i class="ri-menu-2-line" id="open"></i>
+                
+            </div>
         </div>
 
        
 
     </header>
+
+    <div id="responsiveNav">
+        <div id="menu">
+            <i class="ri-close-fill" id="close"></i>
+        </div>
+        <div class="navbar">
+            
+            <a href="index.html" class="navLogo">cartelle</a>
+            <div class="nav-list">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="support.html">support</a></li>
+                <li><a href="bag.html">blog</a></li>
+
+                <li class="dropdownNav">
+                    <a class="dropbtnNav" href="shop.html" style="color: #6d6d6d;">shop <i class="ri-arrow-right-s-fill"></i></a>
+                    <div class="dropdown-contentNav">
+                        <div class="contentNav-card">
+                            <p>shop</p>
+                            <a href="shop.html">all</a>
+                            <a href="bag.html">new arrival</a>
+                        </div>
+                        <div class="contentNav-card">
+                            <p>collection</p>
+                            <a href="shop.html">skincare products</a>
+                            <a href="shop.html">furnitures</a>
+                            <a href="shop.html">Technology</a>
+                            <a href="shop.html">appareal</a>
+                        </div>
+                    </div>
+                </li>
+
+            </div>
+            
+        </div>
+        
+    </div>
     
    
 
@@ -304,6 +345,28 @@
 
 
     <script src="jsFile/main.js"></script>
+    <script>
+        // =========================================menu section=================== 
+
+const menuOpen = document.querySelector("#open");
+const menuClose = document.querySelector("#close");
+const responsiveNav = document.querySelector("#responsiveNav");
+
+menuOpen.addEventListener("click", () => {
+    menuOpen.style.display = "none";
+    menuClose.style.display = "block";
+    
+    responsiveNav.style.top = "0";
+});
+menuClose.addEventListener("click", () => {
+      menuOpen.style.display = "block";
+    menuClose.style.display = "none";
+   
+    responsiveNav.style.top = "-100%";
+});
+
+
+    </script>
    
     
 </body>

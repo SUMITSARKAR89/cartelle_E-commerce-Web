@@ -11,6 +11,7 @@ searchClose.addEventListener("click", () => {
      searchBody.style.display = "none";
 });
 
+
 // ==================slider hero function================
 
 
@@ -83,6 +84,7 @@ function changeImage(a) {
 
 
 
+// ===============================
 const historyTwo = document.querySelector('.history-two');
 const sliderTwoPrev = document.querySelector('#hLeft-btn');
 const sliderTwoNext = document.querySelector('#hRight-btn');
@@ -99,20 +101,6 @@ sliderTwoPrev.addEventListener('click', () => {
     
 });
 
-
-// =========================================menu section=================== 
-
-const menuOpen = document.querySelector("#open");
-const menuClose = document.querySelector("#close");
-
-menuOpen.addEventListener("click", () => {
-    menuOpen.style.display = "none";
-    menuClose.style.display = "block";
-});
-menuClose.addEventListener("click", () => {
-      menuOpen.style.display = "block";
-    menuClose.style.display = "none";
-});
 
 
 

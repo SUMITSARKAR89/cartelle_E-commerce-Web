@@ -192,7 +192,7 @@
   display: none;
   position: absolute;
   top: 18%;
-  right: 6%;
+  right: 7%;
   transition: var(--transition-1);
   animation: zoom 0.5s ease-in-out;
 
@@ -202,6 +202,7 @@
   font-size: var(--h3-font);
   cursor: pointer;
   position: absolute;
+  transition: var(--transition-1);
   
  }
  #open{
@@ -209,10 +210,164 @@
  }
  #close{
   display: none;
-  z-index: 9999;
+  top: -55px;
+  position: absolute;
  }
+ #close:hover{
+  border: 1px solid var(--txt-semi-wht);
+  border-radius: 50%;
+  padding: 1px;
+ }
+#responsiveNav{
+  width: 100%;
+  height: 85vh;
+  background: #ffffffb6;
+  position:fixed;
+  z-index: 1000;
+  top: -100%;
+  padding:3% 4%;
+  left: 0;
+  backdrop-filter: blur(20px);
+  border-radius: 0 0 25% 5%;
+  margin: 2px;
+  border-bottom: 5px solid var(--txt-semi-wht);
+  border-left: 2px dotted var(--txt-semi-wht);
+  border-right: 2px dotted var(--txt-semi-wht);
+  
+  transition: var(--transition-2);
+}
+.navbar{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  gap: 25px;
+}
+.navbar .navLogo{
+   font-size: var(--font-24);
+    color: var(--txt-blk);
+    font-weight: 500;
+    transition: var(--transition-1);
+    border: 1px solid var(--txt-semi-wht);
+    padding: 5px 25px;
+    border-radius: 15px;
+    transition: var(--transition-1);
+
+}
+.navbar .navLogo:hover{
+  font-weight: 600;
+}
+.navbar .nav-list{
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+  padding-left: 10px;
+  border-left: 1px dotted var(--txt-semi-wht);
+}
+.nav-list li a:not(.dropbtnNav){
+  font-size: var(--font-16);
+  color: var(--txt-semi-wht);
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  transition: var(--transition-1);
+}
+
+
+
+
+.nav-list li a::before{
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  margin:0 auto;
+  background: var(--txt-semi-wht);
+  transition: var(--transition-1);
+  
+}
+.nav-list li a:hover::before{
+  width: 100%;
+
+}
+ .dropdownNav {
+  position: relative;
+  width: 50%;
+  
 
  
+}
+.dropdownNav .dropbtnNav{
+ 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-2);
+}
+ .dropbtnNav:hover i{
+  transform: rotate(90deg);
+  
+}
+.dropbtnNav i{
+  font-size: var(--h3-font);
+  transition: var(--transition-2);
+
+}
+.dropdown-contentNav{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  border-radius: 10px 0 10px 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-contentNav a{
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-contentNav a:hover {background-color: #f1f1f1}
+
+.dropdownNav:hover .dropdown-contentNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+}
+.dropdown-contentNav .contentNav-card{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+.contentNav-card p{
+  margin-bottom: 15px;
+  margin-left: 5px;
+  font-weight: 800;
+  opacity: 0.7;
+  text-transform: capitalize;
+}
+.dropdown-contentNav .contentNav-card a{
+  text-align: left;
+  position: relative;
+  background: none;
+}
+
+
+
 
  /* ======================================================================
     ==============================header start here========================
