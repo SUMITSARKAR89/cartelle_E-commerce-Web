@@ -1,4 +1,51 @@
-// =====================search function============= 
+//1. =========================================menu section=================== 
+
+const menuOpen = document.querySelector("#open");
+const menuClose = document.querySelector("#close");
+const responsiveNav = document.querySelector("#responsiveNav");
+
+menuOpen.addEventListener("click", () => {
+    menuOpen.style.display = "none";
+    menuClose.style.display = "block";
+    
+    responsiveNav.style.top = "0";
+});
+menuClose.addEventListener("click", () => {
+      menuOpen.style.display = "block";
+    menuClose.style.display = "none";
+   
+    responsiveNav.style.top = "-100%";
+});
+
+
+
+// 2. ========================modal ========================
+
+function openModal(modalNumber) {
+  const modal = document.getElementById('modal' + modalNumber);
+  modal.style.display = 'flex'; // Shows the modal
+};
+
+
+function closeModal(modalNumber) {
+
+  const modal = document.getElementById('modal' + modalNumber);
+  modal.style.display = 'none'; // Hides the modal
+};
+
+// Close the modal when user clicks outside of it
+window.onclick = function(event) {
+  for (let i = 1; i <= 3; i++) {
+    const modal = document.getElementById('modal' + i);
+    // If the user clicks directly on the modal background (not inside content)
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+};
+
+
+//3. =====================search function============= 
 const searchIcon = document.querySelector(".search-icon");
 const searchBody = document.querySelector("#searchBody");
 const searchClose = document.querySelector(".src-close");
@@ -12,7 +59,7 @@ searchClose.addEventListener("click", () => {
 });
 
 
-// ==================slider hero function================
+//4. ==================slider hero function================
 
 
 const heroNxtBtn = document.querySelector("#heroNext");
@@ -84,7 +131,7 @@ function changeImage(a) {
 
 
 
-// ===============================
+//5. ===============history two================
 const historyTwo = document.querySelector('.history-two');
 const sliderTwoPrev = document.querySelector('#hLeft-btn');
 const sliderTwoNext = document.querySelector('#hRight-btn');
@@ -101,16 +148,34 @@ sliderTwoPrev.addEventListener('click', () => {
     
 });
 
+//6. ==================================section one===================================
+const buttonsOne = document.querySelectorAll(".btn_one");
+const contentOne = document.querySelectorAll(".slideOne-content");
 
 
+function filterSelectionOne(category) {
+    // Show all if category is 'all', otherwise filter by category
+    contentOne.forEach((a) => {
+      if (category === "all" || a.classList.contains(category)) {
+        a.classList.add('active-one');
+        
+      } else {
+        a.classList.remove('active-one');
+        
+      }
+    });
+  }  
+  filterSelectionOne("all");
 
 
-
-
-
-
-
-
-
-
-
+buttonsOne.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      
+      buttonsOne.forEach((btn) => {
+        btn.classList.remove('active-one')
+      });
+     
+      btn.classList.add('active-one');
+      
+    });
+  });

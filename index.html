@@ -73,7 +73,7 @@
 
                 <li>
                     <div class="dropdown">
-                        <a  class="shop-button list-link">shop</a>
+                        <a href="shop.html" class="shop-button list-link">shop</a>
                         <div class="shop-dropdown-content">
                             <div class="shop-card-container">
                                 <div class="shop">
@@ -109,9 +109,6 @@
                 
             </div>
         </div>
-
-       
-
     </header>
 
     <div id="responsiveNav">
@@ -251,7 +248,7 @@
         </div>
 
         <div class="arrival-container">
-            <a href="" class="arrival-img-card">
+            <a  class="arrival-img-card" onclick="openModal(1)">
                 <div class="arrival-images">
                     <img src="imageFile/arrival-img (3).jpeg" alt="" class="img-1">
                     <img src="imageFile/arrival-img (4).jpeg" alt="" class="img-2">
@@ -261,7 +258,7 @@
                 <h4 class="product-title">derma verde</h4>
                 <span class="price">USD $329</span>
             </a>
-            <a href="" class="arrival-img-card">
+            <a  class="arrival-img-card" onclick="openModal(2)">
                 <div class="arrival-images">
                     <img src="imageFile/arrival-img (1).jpeg" alt="" class="img-1">
                     <img src="imageFile/arrival-img (6).jpeg" alt="" class="img-2">
@@ -271,7 +268,7 @@
                 <h4 class="product-title">ElevateDesk</h4>
                 <span class="price">USD $1490</span>
             </a>
-            <a href="" class="arrival-img-card">
+            <a  class="arrival-img-card" onclick="openModal(3)">
                 <div class="arrival-images">
                     <img src="imageFile/arrival-img (2).jpeg" alt="" class="img-1">
                     <img src="imageFile/arrival-img (5).jpeg" alt="" class="img-2">
@@ -283,6 +280,112 @@
             </a>
         </div>
        </section>
+
+       <!-- ======modal group======= -->
+
+       <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(1)">&times;</span>
+              <div class="modal-body">
+                 <li><a href="shop.html">shop </a> / DermaVerde</li>
+
+                    <div class="modal-container">
+                        <div class="modal-img-card">
+                            <div class="modal-img">
+                                <img class="m-img" src="https://framerusercontent.com/images/KAenJ1Amb9EPeYclaMszACqjUY.jpeg" alt="">
+                            </div>
+                            <div class="modal-img">
+                                <img class="m-img2" src="https://framerusercontent.com/images/UxCgU0yNQ2BCQiRPXQbNEHecE.jpeg" alt="">
+                            </div>
+                           
+                        </div>
+                        <div class="modal-info">
+                           <h3>DermaVerde</h3>
+                           <h4>USD $329</h4>
+                           <p>A lightweight yet deeply moisturizing cream that keeps your skin soft and hydrated all day. Perfect for daily use, it absorbs quickly without feeling greasy.</p>
+                           <button>buy now</button>
+
+                            <div class="faq">
+                            <h4>FAQ</h4>
+                            <p><strong>Q:</strong> What is Dermaverde?<br><strong>A:</strong> It's a modern and reliable item.</p>
+                            <p><strong>Q:</strong> How long does it last?<br><strong>A:</strong> About 2-3 years of normal use.</p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(2)">&times;</span>
+              <div class="modal-body">
+                 <li><a href="shop.html">shop </a> / ElevateDesk</li>
+
+                    <div class="modal-container">
+                        <div class="modal-img-card">
+                            <div class="modal-img">
+                                <img class="m-img" src="https://framerusercontent.com/images/4xKFPamzna3bpQXfzTONNcMnJk.jpeg" alt="">
+                            </div>
+                            <div class="modal-img">
+                                <img class="m-img2" src="https://framerusercontent.com/images/IrwSBNzuZyYjz6233YSd71wBq9U.jpeg" alt="">
+                            </div>
+                           
+                        </div>
+                        <div class="modal-info">
+                           <h3>ElevateDesk</h3>
+                           <h4>USD $1490</h4>
+                           <p>A sleek and spacious office desk designed for productivity and style. Crafted for both work and creativity, it offers a modern, minimalist look.</p>
+                           <button>buy now</button>
+
+                            <div class="faq">
+                            <h4>FAQ</h4>
+                            <p><strong>Q:</strong> What is ElevateDesk?<br><strong>A:</strong> It's a modern and reliable item.</p>
+                            <p><strong>Q:</strong> Is there a warranty?<br><strong>A:</strong> Yes, 1 year included..</p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(3)">&times;</span>
+              <div class="modal-body">
+                 <li><a href="shop.html">shop </a> / Designer's Chair</li>
+
+                    <div class="modal-container">
+                        <div class="modal-img-card">
+                            <div class="modal-img">
+                                <img class="m-img" src="https://framerusercontent.com/images/UbuDNV0WQ3RqImL2SDtamZz00ao.jpeg" alt="">
+                            </div>
+                            <div class="modal-img">
+                                <img class="m-img2" src="https://framerusercontent.com/images/fykZdIgSePGleNVV0MjbkKGD5IU.jpeg" alt="">
+                            </div>
+                           
+                        </div>
+                        <div class="modal-info">
+                           <h3>Designer's Chair</h3>
+                           <h4>USD $1099</h4>
+                           <p>Designed for ultimate comfort and support, this ergonomic chair helps you stay productive and relaxed throughout the day.</p>
+                           <button>buy now</button>
+
+                            <div class="faq">
+                            <h4>FAQ</h4>
+                            <p><strong>Q:</strong> What is Designer's Chair?<br><strong>A:</strong> It's a modern and reliable item.</p>
+                            <p><strong>Q:</strong> Is there a warranty?<br><strong>A:</strong> Yes, 1 year included..</p>
+
+                            <p><strong>Q:</strong> Is Product 3 eco-friendly?<br><strong>A:</strong> Yes, it is made from recyclable materials.</p>
+                             <p><strong>Q:</strong> Can I return it?<br><strong>A:</strong> Within 30 days with receipt.</p>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+       
 
         <!-- =================arrival-cards=================  -->
         <section id="arrivalCards">
@@ -698,6 +801,8 @@
             </div>
 
         </section>
+
+       
         
 
         
@@ -777,8 +882,36 @@ menuClose.addEventListener("click", () => {
     responsiveNav.style.top = "-100%";
 });
 
+// ========================modal 
+
+function openModal(modalNumber) {
+  const modal = document.getElementById('modal' + modalNumber);
+  modal.style.display = 'flex'; // Shows the modal
+};
+
+
+function closeModal(modalNumber) {
+
+  const modal = document.getElementById('modal' + modalNumber);
+  modal.style.display = 'none'; // Hides the modal
+};
+
+// Close the modal when user clicks outside of it
+window.onclick = function(event) {
+  for (let i = 1; i <= 3; i++) {
+    const modal = document.getElementById('modal' + i);
+    // If the user clicks directly on the modal background (not inside content)
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+}
+
+
+
 
     </script>
+    
     
 </body>
 </html>

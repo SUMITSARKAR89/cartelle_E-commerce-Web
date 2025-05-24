@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cartelle is a modern eCommerce template designed for seamless shopping and versatile branding. Perfect for fashion, home decor, and more.">
+    <meta name="title" content="Cartelle - demo eCommerce Template">
+    <meta property="og:description" content="Cartelle is a modern eCommerce template designed for seamless shopping and versatile branding. Perfect for fashion, home decor, and more.">
+    <meta property="og:type" content="website ">
+    <meta property="og:title" content="Cartelle - demo eCommerce Template">
+    <meta name="keywords" content="Experience the best of fine dining at Umamia. Explore our menu, meet our team, and indulge in a culinary adventure like no other. ">
+    <meta name="twitter:description" content="Cartelle is a modern eCommerce template designed for seamless shopping and versatile branding. Perfect for fashion, home decor, and more.">
+    <meta name="author" content="sumit sarkar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cartelle - demo eCommerce Template">
+
+    <!-- font awesome cdn   --------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- favicon section   --------------------------------->
+    <link rel="shortcut icon" href="https://framerusercontent.com/images/QQqKiRubQVqOI1MqmWoe5CbBCU.png">
+
+    <!-- this is Css section   --------------------------------->
+     <link rel="stylesheet" href="cssFile/style.css">
+     <link rel="stylesheet" href="cssFile/responsive.css">
+   
+
+    <!-- this is google font section   --------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+   
+   
+    <!-- remix icon link   --------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.4.0/esm/ionicons.min.js" integrity="sha512-heZj7rPbZHWyOEhE34vsJkzj2DKK2mZ9D3jjMkXQJ0uMGu/m5iOty+le26NL1eFZ5+qa4XBYcflwYwITwCWufw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ---swiper js ---------------------------------->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+
+    <!-- ---scroll reveal js ---------------------------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Cartelle - Framer eCommerce Template</title>
+    <style>
+        .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 700px;
+      position: relative;
+      
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .modal-images img {
+      width: 100px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+    .faq {
+      margin-top: 15px;
+    }
+    .faq h4 {
+      margin-bottom: 5px;
+    }
+    </style>
+   
+</head>
+<body>
+    <!-- ======================================================================
+    ==============================header start here========================
+    ====================================================================== -->
+    <div id="searchBody">
+            <input type="search" name="search" id="searchOne-input" placeholder="search.." autocomplete onkeyup="searchOn()">
+            <a class="searchIcon"></a>
+            <p class="src-close">x</p>
+
+    </div>
+    <header>
+        <div class="head">
+            <div class="logo">
+                <a href="index.html">cartelle</a>
+            </div>
+            <nav>
+                <li><a href="index.html" class="list-link">home</a></li>
+
+                <li>
+                    <div class="dropdown">
+                        <a href="shop.html" class="shop-button list-link">shop</a>
+                        <div class="shop-dropdown-content">
+                            <div class="shop-card-container">
+                                <div class="shop">
+                                    <img src="https://framerusercontent.com/images/vCH4hSrfCCV38nlzfDVmORInjuo.jpeg?scale-down-to=512" alt="">
+                                </div>
+                                <div class="shop">
+                                        <span>shop</span>
+                                        <a id="shopLink" href="shop.html">all</a>
+                                        <a id="shopLink" href="shop.html">new arrivals</a>
+                                </div>
+                                <div class="shop">
+                                        <span>collections</span>
+                                        <a id="shopLink" href="shop.html">skincare products</a>
+                                        <a id="shopLink" href="shop.html">furnitures</a>
+                                        <a id="shopLink" href="shop.html">technology</a>
+                                        <a id="shopLink" href="shop.html">apparels</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="about.html" class="list-link">about</a></li>
+                <li><a href="support.html" class="list-link">support</a></li>
+                <li><a href="blog.html" class="list-link">blog</a></li>
+            </nav>
+            <div class="search">
+                <i class="ri-search-line search-icon"></i>
+            </div>
+
+            <div id="menu">
+                <i class="ri-menu-2-line" id="open"></i>
+                
+            </div>
+        </div>
+
+       
+
+    </header>
+
+    <div id="responsiveNav">
+        <div id="menu">
+            <i class="ri-close-fill" id="close"></i>
+        </div>
+        <div class="navbar">
+            
+            <a href="index.html" class="navLogo">cartelle</a>
+            <div class="nav-list">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="support.html">support</a></li>
+                <li><a href="bag.html">blog</a></li>
+
+                <li class="dropdownNav">
+                    <a class="dropbtnNav" href="shop.html" style="color: #6d6d6d;">shop <i class="ri-arrow-right-s-fill"></i></a>
+                    <div class="dropdown-contentNav">
+                        <div class="contentNav-card">
+                            <p>shop</p>
+                            <a href="shop.html">all</a>
+                            <a href="bag.html">new arrival</a>
+                        </div>
+                        <div class="contentNav-card">
+                            <p>collection</p>
+                            <a href="shop.html">skincare products</a>
+                            <a href="shop.html">furnitures</a>
+                            <a href="shop.html">Technology</a>
+                            <a href="shop.html">appareal</a>
+                        </div>
+                    </div>
+                </li>
+
+            </div>
+            
+        </div>
+        
+    </div>
+   
+
+     <!-- ======================================================================
+    ==============================Main start here========================
+    ====================================================================== -->
+
+    
+    <main id="shopSectionMain">
+
+      <div class="arrival-head">
+          <h2 class="arrival-heading">
+              <span>Explore</span> <span>Our</span> <span>Products</span>
+          </h2>
+          <p>Discover handpicked products made just for you.</p>
+      </div>
+
+      <div id="shopSection">
+          <div class="slideOne-btn">
+          <button class="btn_one active-one" onclick="filterSelectionOne('all')">  All</button>
+          <button class="btn_one" onclick="filterSelectionOne('arrivals')"> new arrivals</button>
+          <button class="btn_one b1" onclick="filterSelectionOne('skincare')"> skincare products</button>
+                    
+          <button class="btn_one b1 " onclick="filterSelectionOne('furniture')"> furnitures</button>
+          <button class="btn_one  b1" onclick="filterSelectionOne('technology')"> technology</button>
+          <button class="btn_one  b1" onclick="filterSelectionOne('apparels')">apparels</button>
+          </div>
+
+          <div class="slideOne-container" id="storeItem" >
+
+            <div class="slideOne-content arrivals active-one">
+              <div class="slideCard">
+                <p>pera one</p>
+              </div>
+                        
+            </div>
+              <div class="slideOne-content skincare ">
+              <div class="slideCard">
+                <p>pera 2</p>
+              </div>
+                        
+            </div>
+              <div class="slideOne-content furniture ">
+              <div class="slideCard">
+                <p>pera 3</p>
+              </div>
+                        
+            </div>
+              <div class="slideOne-content technology ">
+              <div class="slideCard">
+                <p>pera 4</p>
+              </div>
+                        
+            </div>
+              <div class="slideOne-content apparels ">
+              <div class="slideCard">
+                <p>pera 5</p>
+              </div>
+                        
+            </div>
+              <div class="slideOne-content arrivals ">
+              <div class="slideCard">
+                <p>pera 6</p>
+              </div>
+                        
+            </div>
+              <div class="slideOne-content arrivals ">
+              <div class="slideCard">
+                <p>pera 7</p>
+              </div>
+                        
+            </div>
+              <div class="slideOne-content skincare ">
+              <div class="slideCard">
+                <p>pera 8</p>
+              </div>
+                        
+            </div>
+        
+
+        
+          </div>
+
+      </div>
+    </main>
+
+     <!-- ======================================================================
+    ==============================footer start here========================
+    ====================================================================== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-card">
+                <div class="footer-left">
+                    <a href="index.html" style="text-transform: capitalize;">cartelle</a>
+                    <a href="mailto:cartelle@design.com">cartelle@design.com</a>
+                    <a href="https://wa.me/+12061231234">+1206-123-1234</a>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="index.html">home</a>
+                        <a href="about.html">about</a>
+                        <a href="support.html">support</a>
+                        <a href="blog.html">blog</a>
+                        <a href="shop.html">shop</a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="trends.html">trends</a>
+                        <a href="favorite.html">favorite</a>
+                        <a href="history.html">furnitures</a>
+                        <a href="bag.html">new arrival</a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="shop.html">collections</a>
+                        <a href="shop.html">products</a>
+                        <a href="" id="terms">terms</a>
+                        <a href="" id="policy">privacy policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-end">
+                <img src="imageFile/footImg.png" alt="">
+                 <div class="newsletter-card" title="Backend is not activate">
+                    <p>Newsletter</p>
+                    <form class="newsletter" action="https://formspree.io/f/yourFormID" method="POST">
+                        <input type="email" name="email" placeholder="Enter your email" required />
+                        <button type="submit">Sign up to newsletter</button>
+                    </form>  
+                 </div>            
+            </div>
+
+            <p>Created by sumit_sarkar</p>
+        </div>
+    </footer>
+
+
+
+
+     <script src="jsFile/main.js"></script>
+     <script>
+        // =========================================menu section=================== 
+
+const menuOpen = document.querySelector("#open");
+const menuClose = document.querySelector("#close");
+const responsiveNav = document.querySelector("#responsiveNav");
+
+menuOpen.addEventListener("click", () => {
+    menuOpen.style.display = "none";
+    menuClose.style.display = "block";
+    
+    responsiveNav.style.top = "0";
+});
+menuClose.addEventListener("click", () => {
+      menuOpen.style.display = "block";
+    menuClose.style.display = "none";
+   
+    responsiveNav.style.top = "-100%";
+
+
+});
+
+// ==================================section one===================================
+const buttonsOne = document.querySelectorAll(".btn_one");
+const contentOne = document.querySelectorAll(".slideOne-content");
+
+
+function filterSelectionOne(category) {
+    // Show all if category is 'all', otherwise filter by category
+    contentOne.forEach((a) => {
+      if (category === "all" || a.classList.contains(category)) {
+        a.classList.add('active-one');
+        
+      } else {
+        a.classList.remove('active-one');
+        
+      }
+    });
+  }  
+  filterSelectionOne("all");
+
+
+buttonsOne.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      
+      buttonsOne.forEach((btn) => {
+        btn.classList.remove('active-one')
+      });
+     
+      btn.classList.add('active-one');
+      
+    });
+  });
+
+
+      </script> 
+
+     
+    
+</body>
+</html>
