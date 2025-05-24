@@ -2538,7 +2538,7 @@ span#heroNext:hover, span#heroPrev:hover{
   color: var(--txt-semi-wht);
   text-transform: capitalize;
   border-bottom: 1px solid #dbd9d967;
-  padding-bottom: 10px;
+  padding:5px 10px;
   transition: var(--transition-1);
  
   max-width: 100%;
@@ -2568,6 +2568,7 @@ span#heroNext:hover, span#heroPrev:hover{
      border-radius: 5%;
     color: #000;
     transition: 0.3s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
 }
 .slideOne-container{
    max-width: 100%;
@@ -2586,17 +2587,23 @@ span#heroNext:hover, span#heroPrev:hover{
     transition-delay: 0.5s;
     transition: 0.5s ;
      border-left: 1px solid #b4aeae94;
-    border-radius: 1%;
+    border-radius: 5%;
    
    
+}
+.slideOne-container:hover{
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .slideOne-container .slideOne-content{
     max-width: 100%;
-    min-height:100%;
+    height: 280px;
     width: 100%;
-    margin: 5px auto;   
-    padding: 10px 0px;
+    border: 1px solid #ebe8e8;
+    border-radius: 10px;
+    
+    margin: 20px auto;   
+    
     display: none;
     animation: fade 1s ease-in-out;
    
@@ -2606,9 +2613,71 @@ span#heroNext:hover, span#heroPrev:hover{
     display: block;
    
 }
-
-.slideOne-content .slideCard{
-  
-  height: 220px;
+.slideOne-content .slide-img-card{
   width: 100%;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  
 }
+.slide-img-card .slide-img{
+  width: 100%;
+  height: 200px;
+}
+.slide-img img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-2);
+  border-radius: 5px;
+}
+.slide-img .sim-1{
+  opacity: 1;
+  z-index: 1;
+}
+.slide-img .sim-2{
+  opacity: 0;
+  z-index: 0;
+
+}
+.slide-img:hover .sim-1 {
+  opacity: 0;
+}
+
+.slide-img:hover .sim-2 {
+  opacity: 1;
+}
+.slide-img-card .eye{
+  position: absolute;
+    bottom: 12%;
+    right: 6%;
+    font-size: var(--font-18);
+    padding: 2px 4px;
+    background: #ffffffd0;
+    border-radius: 50%;
+    color: var(--txt-blk);
+    backdrop-filter: blur(2px);
+    border: 1px solid #0000005e;
+
+}
+.slideOne-content p{
+  margin: 10px 10px 0;
+  color: var(--txt-blk);
+  font-size: var(--font-16);
+  opacity: 1;
+  font-weight: 300;
+ 
+}
+.slideOne-content span{
+   margin: 15px 10px 0;
+   padding-top: 5px;
+  color: var(--txt-semi-wht);
+  font-size: var(--font-16);
+  opacity: 1;
+  font-weight: 500;
+
+}
+

@@ -84,7 +84,7 @@ function changeImage(a) {
 
 
 
-// ===============================
+// ===============history two================
 const historyTwo = document.querySelector('.history-two');
 const sliderTwoPrev = document.querySelector('#hLeft-btn');
 const sliderTwoNext = document.querySelector('#hRight-btn');
